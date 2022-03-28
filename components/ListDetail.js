@@ -1,17 +1,27 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
+const textColor = (input) => {
+  if (input > 0)
+  return {color: 'green'} 
+  else if (input < 0)
+  return {color: 'red'}
+  else
+  return {color: 'black'}
+}
 const ListDetail = props => {
-  // const { cryptoSlang, cryptoName, itemView } = styles;
+ 
   return (
     <View style={styles.itemView}>
       <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
       <Text style={styles.priceTextStyling}>{props.price}</Text>
-      <Text style={styles.changeTextStyling}>{props.change}</Text>
+      <Text style={[styles.changeTextStyling, textColor(props.change)]} >{props.change}%</Text>
 
     </View>
   )
 };
+
+
 const styles = {
   itemView: {
     backgroundColor: 'gainsboro',
