@@ -7,12 +7,8 @@ export class CryptoList extends Component {
   constructor() {
     super();
     this.state = { cryptoList : []};
-    this.state = { test : []};
   }
   componentDidMount() {
-    // console.log("carlist mounted!");
-
-
     axios.get('https://api.alternative.me/v2/ticker/?limit=20').then (response => {
       let data = response.data.data;
       let dataEl = listingDataOptimizer(data)

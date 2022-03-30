@@ -26,7 +26,6 @@ const ListDetail = props => {
       </View>
       <Text style={styles.priceTextStyling}>{props.price}</Text>
       <Text style={[styles.changeTextStyling, textColor(props.change)]} >{props.change}%</Text>
-
     </View>
   )
 };

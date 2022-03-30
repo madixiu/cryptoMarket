@@ -19,8 +19,6 @@ export function listingDataOptimizer(data) {
       
         if (item.percent_change_7d != null && item.percent_change_7d !=0)
         item.percent_change_7d=twoDigitTruncator(item.percent_change_7d)
-      
-        // dataEl[0].percent_change_7d = dataEl[0].percent_change_7d.toLocaleString()
         delete item["quotes"]
       }
       return dataEl
