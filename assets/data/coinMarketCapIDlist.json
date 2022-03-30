@@ -1,0 +1,502 @@
+{
+  "BTC": {
+    "id": 1,
+    "name": "Bitcoin",
+    "slug": "bitcoin"
+  },
+  "ETH": {
+    "id": 1027,
+    "name": "Ethereum",
+    "slug": "ethereum"
+  },
+  "USDT": {
+    "id": 825,
+    "name": "Tether",
+    "slug": "tether"
+  },
+  "BNB": {
+    "id": 1839,
+    "name": "BNB",
+    "slug": "bnb"
+  },
+  "USDC": {
+    "id": 3408,
+    "name": "USD Coin",
+    "slug": "usd-coin"
+  },
+  "XRP": {
+    "id": 52,
+    "name": "XRP",
+    "slug": "xrp"
+  },
+  "ADA": {
+    "id": 2010,
+    "name": "Cardano",
+    "slug": "cardano"
+  },
+  "LUNA": {
+    "id": 4172,
+    "name": "Terra",
+    "slug": "terra-luna"
+  },
+  "SOL": {
+    "id": 5426,
+    "name": "Solana",
+    "slug": "solana"
+  },
+  "AVAX": {
+    "id": 5805,
+    "name": "Avalanche",
+    "slug": "avalanche"
+  },
+  "DOT": {
+    "id": 6636,
+    "name": "Polkadot",
+    "slug": "polkadot-new"
+  },
+  "DOGE": {
+    "id": 74,
+    "name": "Dogecoin",
+    "slug": "dogecoin"
+  },
+  "BUSD": {
+    "id": 4687,
+    "name": "Binance USD",
+    "slug": "binance-usd"
+  },
+  "UST": {
+    "id": 7129,
+    "name": "TerraUSD",
+    "slug": "terrausd"
+  },
+  "SHIB": {
+    "id": 5994,
+    "name": "Shiba Inu",
+    "slug": "shiba-inu"
+  },
+  "MATIC": {
+    "id": 3890,
+    "name": "Polygon",
+    "slug": "polygon"
+  },
+  "WBTC": {
+    "id": 3717,
+    "name": "Wrapped Bitcoin",
+    "slug": "wrapped-bitcoin"
+  },
+  "CRO": {
+    "id": 3635,
+    "name": "Cronos",
+    "slug": "cronos"
+  },
+  "DAI": {
+    "id": 4943,
+    "name": "Dai",
+    "slug": "multi-collateral-dai"
+  },
+  "NEAR": {
+    "id": 6535,
+    "name": "NEAR Protocol",
+    "slug": "near-protocol"
+  },
+  "LTC": {
+    "id": 2,
+    "name": "Litecoin",
+    "slug": "litecoin"
+  },
+  "ATOM": {
+    "id": 3794,
+    "name": "Cosmos",
+    "slug": "cosmos"
+  },
+  "LINK": {
+    "id": 1975,
+    "name": "Chainlink",
+    "slug": "chainlink"
+  },
+  "UNI": {
+    "id": 7083,
+    "name": "Uniswap",
+    "slug": "uniswap"
+  },
+  "TRX": {
+    "id": 1958,
+    "name": "TRON",
+    "slug": "tron"
+  },
+  "BCH": {
+    "id": 1831,
+    "name": "Bitcoin Cash",
+    "slug": "bitcoin-cash"
+  },
+  "FTT": {
+    "id": 4195,
+    "name": "FTX Token",
+    "slug": "ftx-token"
+  },
+  "ETC": {
+    "id": 1321,
+    "name": "Ethereum Classic",
+    "slug": "ethereum-classic"
+  },
+  "ALGO": {
+    "id": 4030,
+    "name": "Algorand",
+    "slug": "algorand"
+  },
+  "XLM": {
+    "id": 512,
+    "name": "Stellar",
+    "slug": "stellar"
+  },
+  "LEO": {
+    "id": 3957,
+    "name": "UNUS SED LEO",
+    "slug": "unus-sed-leo"
+  },
+  "WAVES": {
+    "id": 1274,
+    "name": "Waves",
+    "slug": "waves"
+  },
+  "MANA": {
+    "id": 1966,
+    "name": "Decentraland",
+    "slug": "decentraland"
+  },
+  "FIL": {
+    "id": 2280,
+    "name": "Filecoin",
+    "slug": "filecoin"
+  },
+  "HBAR": {
+    "id": 4642,
+    "name": "Hedera",
+    "slug": "hedera"
+  },
+  "ICP": {
+    "id": 8916,
+    "name": "Internet Computer",
+    "slug": "internet-computer"
+  },
+  "VET": {
+    "id": 3077,
+    "name": "VeChain",
+    "slug": "vechain"
+  },
+  "EGLD": {
+    "id": 6892,
+    "name": "Elrond",
+    "slug": "elrond-egld"
+  },
+  "AXS": {
+    "id": 6783,
+    "name": "Axie Infinity",
+    "slug": "axie-infinity"
+  },
+  "RUNE": {
+    "id": 4157,
+    "name": "THORChain",
+    "slug": "thorchain"
+  },
+  "SAND": {
+    "id": 6210,
+    "name": "The Sandbox",
+    "slug": "the-sandbox"
+  },
+  "XMR": {
+    "id": 328,
+    "name": "Monero",
+    "slug": "monero"
+  },
+  "THETA": {
+    "id": 2416,
+    "name": "Theta Network",
+    "slug": "theta-network"
+  },
+  "APE": {
+    "id": 18876,
+    "name": "ApeCoin",
+    "slug": "apecoin-ape"
+  },
+  "FTM": {
+    "id": 3513,
+    "name": "Fantom",
+    "slug": "fantom"
+  },
+  "XTZ": {
+    "id": 2011,
+    "name": "Tezos",
+    "slug": "tezos"
+  },
+  "KLAY": {
+    "id": 4256,
+    "name": "Klaytn",
+    "slug": "klaytn"
+  },
+  "EOS": {
+    "id": 1765,
+    "name": "EOS",
+    "slug": "eos"
+  },
+  "AAVE": {
+    "id": 7278,
+    "name": "Aave",
+    "slug": "aave"
+  },
+  "HNT": {
+    "id": 5665,
+    "name": "Helium",
+    "slug": "helium"
+  },
+  "ZEC": {
+    "id": 1437,
+    "name": "Zcash",
+    "slug": "zcash"
+  },
+  "FLOW": {
+    "id": 4558,
+    "name": "Flow",
+    "slug": "flow"
+  },
+  "MIOTA": {
+    "id": 1720,
+    "name": "IOTA",
+    "slug": "iota"
+  },
+  "CAKE": {
+    "id": 7186,
+    "name": "PancakeSwap",
+    "slug": "pancakeswap"
+  },
+  "GRT": {
+    "id": 6719,
+    "name": "The Graph",
+    "slug": "the-graph"
+  },
+  "MKR": {
+    "id": 1518,
+    "name": "Maker",
+    "slug": "maker"
+  },
+  "BTT": {
+    "id": 16086,
+    "name": "BitTorrent-New",
+    "slug": "bittorrent-new"
+  },
+  "NEO": {
+    "id": 1376,
+    "name": "Neo",
+    "slug": "neo"
+  },
+  "ONE": {
+    "id": 3945,
+    "name": "Harmony",
+    "slug": "harmony"
+  },
+  "STX": {
+    "id": 4847,
+    "name": "Stacks",
+    "slug": "stacks"
+  },
+  "GALA": {
+    "id": 7080,
+    "name": "Gala",
+    "slug": "gala"
+  },
+  "BSV": {
+    "id": 3602,
+    "name": "Bitcoin SV",
+    "slug": "bitcoin-sv"
+  },
+  "XEC": {
+    "id": 10791,
+    "name": "eCash",
+    "slug": "ecash"
+  },
+  "CHZ": {
+    "id": 4066,
+    "name": "Chiliz",
+    "slug": "chiliz"
+  },
+  "QNT": {
+    "id": 3155,
+    "name": "Quant",
+    "slug": "quant"
+  },
+  "KCS": {
+    "id": 2087,
+    "name": "KuCoin Token",
+    "slug": "kucoin-token"
+  },
+  "CVX": {
+    "id": 9903,
+    "name": "Convex Finance",
+    "slug": "convex-finance"
+  },
+  "LRC": {
+    "id": 1934,
+    "name": "Loopring",
+    "slug": "loopring"
+  },
+  "ENJ": {
+    "id": 2130,
+    "name": "Enjin Coin",
+    "slug": "enjin-coin"
+  },
+  "KSM": {
+    "id": 5034,
+    "name": "Kusama",
+    "slug": "kusama"
+  },
+  "CELO": {
+    "id": 5567,
+    "name": "Celo",
+    "slug": "celo"
+  },
+  "HT": {
+    "id": 2502,
+    "name": "Huobi Token",
+    "slug": "huobi-token"
+  },
+  "DASH": {
+    "id": 131,
+    "name": "Dash",
+    "slug": "dash"
+  },
+  "NEXO": {
+    "id": 2694,
+    "name": "Nexo",
+    "slug": "nexo"
+  },
+  "BAT": {
+    "id": 1697,
+    "name": "Basic Attention Token",
+    "slug": "basic-attention-token"
+  },
+  "TUSD": {
+    "id": 2563,
+    "name": "TrueUSD",
+    "slug": "trueusd"
+  },
+  "AR": {
+    "id": 5632,
+    "name": "Arweave",
+    "slug": "arweave"
+  },
+  "OKB": {
+    "id": 3897,
+    "name": "OKB",
+    "slug": "okb"
+  },
+  "CRV": {
+    "id": 6538,
+    "name": "Curve DAO Token",
+    "slug": "curve-dao-token"
+  },
+  "ZIL": {
+    "id": 2469,
+    "name": "Zilliqa",
+    "slug": "zilliqa"
+  },
+  "KDA": {
+    "id": 5647,
+    "name": "Kadena",
+    "slug": "kadena"
+  },
+  "MINA": {
+    "id": 8646,
+    "name": "Mina",
+    "slug": "mina"
+  },
+  "AMP": {
+    "id": 6945,
+    "name": "Amp",
+    "slug": "amp"
+  },
+  "HOT": {
+    "id": 2682,
+    "name": "Holo",
+    "slug": "holo"
+  },
+  "XEM": {
+    "id": 873,
+    "name": "NEM",
+    "slug": "nem"
+  },
+  "TFUEL": {
+    "id": 3822,
+    "name": "Theta Fuel",
+    "slug": "theta-fuel"
+  },
+  "ROSE": {
+    "id": 7653,
+    "name": "Oasis Network",
+    "slug": "oasis-network"
+  },
+  "COMP": {
+    "id": 5692,
+    "name": "Compound",
+    "slug": "compound"
+  },
+  "USDP": {
+    "id": 3330,
+    "name": "Pax Dollar",
+    "slug": "paxos-standard"
+  },
+  "GNO": {
+    "id": 1659,
+    "name": "Gnosis",
+    "slug": "gnosis-gno"
+  },
+  "DCR": {
+    "id": 1168,
+    "name": "Decred",
+    "slug": "decred"
+  },
+  "IOTX": {
+    "id": 2777,
+    "name": "IoTeX",
+    "slug": "iotex"
+  },
+  "SCRT": {
+    "id": 5604,
+    "name": "Secret",
+    "slug": "secret"
+  },
+  "QTUM": {
+    "id": 1684,
+    "name": "Qtum",
+    "slug": "qtum"
+  },
+  "XYM": {
+    "id": 8677,
+    "name": "Symbol",
+    "slug": "symbol"
+  },
+  "YFI": {
+    "id": 5864,
+    "name": "yearn.finance",
+    "slug": "yearn-finance"
+  },
+  "USDN": {
+    "id": 5068,
+    "name": "Neutrino USD",
+    "slug": "neutrino-usd"
+  },
+  "BORA": {
+    "id": 3801,
+    "name": "BORA",
+    "slug": "bora"
+  },
+  "CEL": {
+    "id": 2700,
+    "name": "Celsius",
+    "slug": "celsius"
+  },
+  "OMG": {
+    "id": 1808,
+    "name": "OMG Network",
+    "slug": "omg"
+  }
+}
