@@ -38,7 +38,7 @@ const styles = {
     marginLeft: 5,
     marginRight:5,
     marginBottom: 5,
-    borderRadius: 7,
+    borderRadius: 15,
     // flex:1,
     justifyContent: 'space-between',
     alignItems: 'center',

@@ -5,16 +5,14 @@ import CryptoList from './components/CryptoList'
 
 export default function App() {
   return (
-    <View>
-      <View>
+    <View style={styles.container}>
+    {/* //   <View> */}
       <StatusBar style="auto" />
-      {/* <Text>Open up App.js to start working on your</Text> */}
       <Header title={'CryptoMarket'}/>
+    {/* //   </View> */}
+      {/* <View > */}
+      <CryptoList />
       </View>
-      <View >
-        <CryptoList />
-      </View>
-    </View>
     
   );
 }
@@ -22,9 +20,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width:'100%',
     backgroundColor: '#555',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   textCenter: {
     color:'#555'
