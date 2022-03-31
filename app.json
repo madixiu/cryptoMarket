@@ -43,6 +43,8 @@
         "wasm",
         "svg"
       ]
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/madixiu/cryptoMarket"
   }
 }
