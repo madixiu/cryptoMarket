@@ -1,10 +1,10 @@
-import { twoDigitTruncator } from "./numberTruncator";
+import { twoDigitTruncator,priceOptimizer } from "./numberOptimizer";
 
 export function listingDataOptimizer(data) {
   var dataEl = Object.values(data);
       dataEl.sort((a,b) => (a.rank > b.rank) ? 1 : ((b.rank > a.rank) ? -1 : 0))
       for (let item of dataEl){
-        item.price = item.quotes.USD.price
+        item.price = priceOptimizer(item.quotes.USD.price)
         item.market_cap=item.quotes.USD.market_cap
         item.percent_change_24h=item.quotes.USD.percent_change_24h
         item.percent_change_1h=item.quotes.USD.percent_change_1h

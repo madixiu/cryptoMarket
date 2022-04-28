@@ -1,7 +1,6 @@
 import React from 'react'
-import { View, Text,Image } from 'react-native'
+import { View, Text,Image,TouchableHighlight } from 'react-native'
 import jsonData from '../assets/data/coinMarketCapIDlist.json'
-
 const textColor = (input) => {
   if (input > 0)
   return {color: 'green'} 
@@ -14,32 +13,69 @@ const iconIDfinder = (symbol) => {
   let IDdata = jsonData
   return IDdata[symbol].id
 }
+const onItemClick = (item) => {
+  // alert(item)
+  return
+}
 const ListDetail = props => {
   
   return (
-    <View style={styles.itemView}>
-      <View style={styles.IconViewStyle}>
-        <Image source={{ uri: 'https://s2.coinmarketcap.com/static/img/coins/64x64/'+iconIDfinder(props.symbol)+'.png', cache: 'force-cache'}} 
-          style={{ width: 32, height: 32,marginLeft: 10, }}
-        />
-        <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+    <TouchableHighlight
+      activeOpacity={0.6}
+      underlayColor="#999"
+      onPress={() => 
+        onItemClick(props.symbol)}
+    >
+      
+      <View style={styles.container}>
+        <View style={styles.IconViewStyle}>
+          <Image source={{ uri: 'https://s2.coinmarketcap.com/static/img/coins/64x64/'+iconIDfinder(props.symbol)+'.png', cache: 'force-cache'}} 
+            style={{ width: 32, height: 32,marginLeft: 10, }}
+          />
+          <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+        </View>
+        <View style={styles.PriceViewStyle}>
+          <Text style={styles.priceTextStyling}>{props.price}</Text>
+
+        </View>
+
+        <View style={styles.ChangeViewStyle}>
+          <View style={styles.ChangeSubViewStyle}>
+
+            <Text style={[styles.changeTextStyling, textColor(props.change1h)]} >{props.change1h}%</Text>
+            <Text style={[styles.changeTextStyling,{marginLeft:5}]}>1H</Text>
+          </View>
+          <View style={styles.ChangeSubViewStyle}>
+          <Text style={[styles.changeTextStyling, textColor(props.change24h)]} >{props.change24h}%</Text>
+          <Text style={[styles.changeTextStyling,{marginLeft:5}]}>1D</Text>
+
+          </View>
+          <View style={styles.ChangeSubViewStyle}>
+          <Text style={[styles.changeTextStyling, textColor(props.change7d)]} >{props.change7d}%</Text>
+          <Text style={[styles.changeTextStyling,{marginLeft:5}]}>7D</Text>
+
+          </View>
+        </View>
       </View>
-      <Text style={styles.priceTextStyling}>{props.price}</Text>
-      <Text style={[styles.changeTextStyling, textColor(props.change)]} >{props.change}%</Text>
-    </View>
+    </TouchableHighlight>
   )
 };
 
 
 const styles = {
-  itemView: {
-    backgroundColor: 'gainsboro',
-    marginLeft: 5,
-    marginRight:5,
-    marginBottom: 5,
-    borderRadius: 15,
+  container: {
+    backgroundColor: 'rgb( 200, 200, 200)',
+    // borderColor:'#888',
+    // borderStyle:'solid',
+    // borderWidth:0.5,
+    elevation:3,
+    // marginLeft: 5,
+    // marginRight:5,
+    marginBottom: 3,
+    marginTop:1,
+    borderRadius: 8,
     // flex:1,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
     minHeight: 74
@@ -49,20 +85,37 @@ const styles = {
     paddingLeft: 10,
   },
   priceTextStyling: {
-    fontSize: 15,
+    fontSize: 12,
   },
   changeTextStyling: {
-    fontSize: 15,
-    paddingRight: 22,
+    fontSize: 11,
+    // paddingRight: 22,
   },
   IconViewStyle: {
     // backgroundColor: 'gainsboro',
     // height: 70,
+    flex:1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     // paddingTop: 25
+  },
+  PriceViewStyle: {
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  ChangeViewStyle:{
+    flex:1,
+    justifyContent: 'flex-end',
 
+  },
+  ChangeSubViewStyle: {
+    // flex:1,
+    flexDirection:'row',
+    justifyContent: 'flex-end',
+
+    paddingRight: 22
   },
   logo: {
     width: 16,
