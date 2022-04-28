@@ -32,7 +32,11 @@ const ListDetail = props => {
           <Image source={{ uri: 'https://s2.coinmarketcap.com/static/img/coins/64x64/'+iconIDfinder(props.symbol)+'.png', cache: 'force-cache'}} 
             style={{ width: 32, height: 32,marginLeft: 10, }}
           />
+          <View>
           <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+          <Text style={styles.nameTextStyling}>{props.name}</Text>
+          </View>
+
         </View>
         <View style={styles.PriceViewStyle}>
           <Text style={styles.priceTextStyling}>{props.price}</Text>
@@ -83,6 +87,11 @@ const styles = {
   symbolTextStyling: {
     fontSize: 15,
     paddingLeft: 10,
+  },
+  nameTextStyling: {
+    fontSize: 12,
+    paddingLeft: 10,
+    color: '#666'
   },
   priceTextStyling: {
     fontSize: 12,

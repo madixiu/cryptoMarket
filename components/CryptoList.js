@@ -19,17 +19,17 @@ export class CryptoList extends Component {
     return (
       <View style={{flex:1}}>
       <View style={styles.listHeader}>
-        <View style={{flex:1}}>
-          <Text>Coin</Text>
+        <View style={{flex:1,alignItems: 'flex-start',flexWrap:'wrap',justifyContent:'center'}}>
+          <Text style={{fontSize:11,color:'#444'}}>Coin</Text>
 
         </View>
-        <View style={{flex:1,alignItems:'center',flexWrap:'wrap'}}>
-          <Text >Price</Text>
+        <View style={{alignItems:'center',flexWrap:'wrap',justifyContent:'center'}}>
+          <Text style={{fontSize:11,color:'#444'}}>Price $</Text>
 
         </View>
-
-        <View  style={{flex:1,alignItems:'flex-end',flexWrap:'wrap'}}>
-          <Text>Change</Text>
+{/* ,color:'#555' */}
+        <View  style={{flex:1,alignItems:'flex-start',flexWrap:'wrap-reverse',justifyContent:'center'}}>
+          <Text style={{fontSize:11,color:'#444'}}>Change %</Text>
 
         </View>
 
@@ -39,7 +39,7 @@ export class CryptoList extends Component {
         <FlatList
           data={this.state.cryptoList}
           renderItem={({ item }) => {
-            return   <ListDetail symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
+            return   <ListDetail name={item.name} symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
           }}
   
         />
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     // flex:1,
     flexDirection:'row',
     // justifyContent: 'center',
-    paddingLeft: 30,
-    paddingRight: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
 
 
 
