@@ -82,7 +82,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    minHeight: 74
+    // minHeight: 74
   },
   symbolTextStyling: {
     fontSize: 15,
@@ -117,6 +117,9 @@ const styles = {
   ChangeViewStyle:{
     flex:1,
     justifyContent: 'flex-end',
+    paddingTop: 5,
+    paddingBottom: 5
+
 
   },
   ChangeSubViewStyle: {

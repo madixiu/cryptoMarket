@@ -1,20 +1,40 @@
 import React, { Component } from 'react'
-import { View,Text,StyleSheet,FlatList } from 'react-native';
+import { View,Text,StyleSheet,FlatList,RefreshControl } from 'react-native';
 import axios from 'axios'
 import { listingDataOptimizer } from './misc/dataOptimizer'
 import ListDetail from './ListDetail'
+
 export class CryptoList extends Component {
   constructor() {
     super();
-    this.state = { cryptoList : []};
+    this.state = { cryptoList : [], refreshing: false};
+
   }
   componentDidMount() {
+    this.getData()
+    // axios.get('https://api.alternative.me/v2/ticker/?limit=20').then (response => {
+    //   let data = response.data.data;
+    //   let dataEl = listingDataOptimizer(data)
+    //   this.setState({cryptoList: dataEl})
+    // })
+  }
+  
+  getData() {
     axios.get('https://api.alternative.me/v2/ticker/?limit=20').then (response => {
       let data = response.data.data;
       let dataEl = listingDataOptimizer(data)
       this.setState({cryptoList: dataEl})
     })
   }
+  onRefresh(){
+    this.setState({refreshing : true})
+    this.getData();
+    setTimeout(() => {
+      this.setState({refreshing : false})
+      
+    }, 2000);
+   
+  } 
   render() {
     return (
       <View style={{flex:1}}>
@@ -27,7 +47,6 @@ export class CryptoList extends Component {
           <Text style={{fontSize:11,color:'#444'}}>Price $</Text>
 
         </View>
-{/* ,color:'#555' */}
         <View  style={{flex:1,alignItems:'flex-start',flexWrap:'wrap-reverse',justifyContent:'center'}}>
           <Text style={{fontSize:11,color:'#444'}}>Change %</Text>
 
@@ -41,6 +60,12 @@ export class CryptoList extends Component {
           renderItem={({ item }) => {
             return   <ListDetail name={item.name} symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
           }}
+          refreshControl={
+            <RefreshControl 
+              refreshing={this.state.refreshing}
+              onRefresh={this.onRefresh.bind(this)}
+            />
+          }
   
         />
       </View>
