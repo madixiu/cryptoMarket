@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View,Text,StyleSheet,FlatList,RefreshControl } from 'react-native';
 import axios from 'axios'
-import { listingDataOptimizer } from './misc/dataOptimizer'
+import { listingDataOptimizer } from '../misc/dataOptimizer'
 import ListDetail from './ListDetail'
 
 export class CryptoList extends Component {
@@ -33,42 +33,42 @@ export class CryptoList extends Component {
       this.setState({refreshing : false})
       
     }, 2000);
-   
+
   } 
   render() {
     return (
-      <View style={{flex:1}}>
-      <View style={styles.listHeader}>
-        <View style={{flex:1,alignItems: 'flex-start',flexWrap:'wrap',justifyContent:'center'}}>
-          <Text style={{fontSize:11,color:'#444'}}>Coin</Text>
+      <View style={{flex:1,backgroundColor:'#999'}}>
+        <View style={styles.listHeader}>
+          <View style={{flex:1,alignItems: 'flex-start',flexWrap:'wrap',justifyContent:'center'}}>
+            <Text style={{fontSize:11,color:'#111'}}>Coin</Text>
 
-        </View>
-        <View style={{alignItems:'center',flexWrap:'wrap',justifyContent:'center'}}>
-          <Text style={{fontSize:11,color:'#444'}}>Price $</Text>
+          </View>
+          <View style={{alignItems:'center',flexWrap:'wrap',justifyContent:'center'}}>
+            <Text style={{fontSize:11,color:'#111'}}>Price $</Text>
 
-        </View>
-        <View  style={{flex:1,alignItems:'flex-start',flexWrap:'wrap-reverse',justifyContent:'center'}}>
-          <Text style={{fontSize:11,color:'#444'}}>Change %</Text>
+          </View>
+          <View  style={{flex:1,alignItems:'flex-start',flexWrap:'wrap-reverse',justifyContent:'center'}}>
+            <Text style={{fontSize:11,color:'#111'}}>Change %</Text>
 
-        </View>
+          </View>
 
-        </View>
-      <View style={styles.listView}>
-        
-        <FlatList
-          data={this.state.cryptoList}
-          renderItem={({ item }) => {
-            return   <ListDetail name={item.name} symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
-          }}
-          refreshControl={
-            <RefreshControl 
-              refreshing={this.state.refreshing}
-              onRefresh={this.onRefresh.bind(this)}
-            />
-          }
-  
-        />
       </View>
+        <View style={styles.listView}>
+          
+          <FlatList
+            data={this.state.cryptoList}
+            renderItem={({ item }) => {
+              return   <ListDetail navigation={this.props.navigation} name={item.name} symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
+            }}
+            refreshControl={
+              <RefreshControl 
+                refreshing={this.state.refreshing}
+                onRefresh={this.onRefresh.bind(this)}
+              />
+            }
+    
+          />  
+        </View>
       </View>
     )
   }
@@ -76,9 +76,8 @@ export class CryptoList extends Component {
 const styles = StyleSheet.create({
   listView: {
     flex:1,
+    marginHorizontal: 5,
     // marginTop: 15,
-    marginLeft: 5,
-    marginRight:5,
     // paddingBottom:20,
     // paddingTop: 20,
   },
@@ -88,12 +87,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     paddingLeft: 20,
     paddingRight: 20,
-
-
-
-
     // paddingBottom:1
-
   }
  
 });

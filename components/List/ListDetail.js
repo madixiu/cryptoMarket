@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text,Image,TouchableHighlight } from 'react-native'
-import jsonData from '../assets/data/coinMarketCapIDlist.json'
+import jsonData from '../../assets/data/coinMarketCapIDlist.json'
+// ?functions
 const textColor = (input) => {
   if (input > 0)
   return {color: 'green'} 
@@ -13,18 +14,22 @@ const iconIDfinder = (symbol) => {
   let IDdata = jsonData
   return IDdata[symbol].id
 }
-const onItemClick = (item) => {
+const onItemClick = (data,navigation) => {
   // alert(item)
-  return
+    // console.log(item);
+    navigation.navigate('CryptoDetail',{data: data})
+  // return <CryptoDetail symbol={item}/>
 }
-const ListDetail = props => {
+// ? *************
+
+const ListDetail = (props) => {
   
   return (
     <TouchableHighlight
       activeOpacity={0.6}
       underlayColor="#999"
       onPress={() => 
-        onItemClick(props.symbol)}
+        onItemClick({symbol: props.symbol,name: props.name},props.navigation)}
     >
       
       <View style={styles.container}>
