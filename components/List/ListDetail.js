@@ -15,10 +15,7 @@ const iconIDfinder = (symbol) => {
   return IDdata[symbol].id
 }
 const onItemClick = (data,navigation) => {
-  // alert(item)
-    // console.log(item);
     navigation.navigate('CryptoDetail',{data: data})
-  // return <CryptoDetail symbol={item}/>
 }
 // ? *************
 
@@ -38,32 +35,32 @@ const ListDetail = (props) => {
             style={{ width: 32, height: 32,marginLeft: 10, }}
           />
           <View>
-          <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
-          <Text style={styles.nameTextStyling}>{props.name}</Text>
+            <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+            <Text style={styles.nameTextStyling}>{props.name}</Text>
           </View>
-
         </View>
+
         <View style={styles.PriceViewStyle}>
           <Text style={styles.priceTextStyling}>{props.price}</Text>
-
         </View>
 
         <View style={styles.ChangeViewStyle}>
-          <View style={styles.ChangeSubViewStyle}>
 
+          <View style={styles.ChangeSubViewStyle}>
             <Text style={[styles.changeTextStyling, textColor(props.change1h)]} >{props.change1h}%</Text>
             <Text style={[styles.changeTextStyling,{marginLeft:5}]}>1H</Text>
           </View>
-          <View style={styles.ChangeSubViewStyle}>
-          <Text style={[styles.changeTextStyling, textColor(props.change24h)]} >{props.change24h}%</Text>
-          <Text style={[styles.changeTextStyling,{marginLeft:5}]}>1D</Text>
 
-          </View>
           <View style={styles.ChangeSubViewStyle}>
-          <Text style={[styles.changeTextStyling, textColor(props.change7d)]} >{props.change7d}%</Text>
-          <Text style={[styles.changeTextStyling,{marginLeft:5}]}>7D</Text>
-
+            <Text style={[styles.changeTextStyling, textColor(props.change24h)]} >{props.change24h}%</Text>
+            <Text style={[styles.changeTextStyling,{marginLeft:5}]}>1D</Text>
           </View>
+
+          <View style={styles.ChangeSubViewStyle}>
+            <Text style={[styles.changeTextStyling, textColor(props.change7d)]} >{props.change7d}%</Text>
+            <Text style={[styles.changeTextStyling,{marginLeft:5}]}>7D</Text>
+          </View>
+          
         </View>
       </View>
     </TouchableHighlight>

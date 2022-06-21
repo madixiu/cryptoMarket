@@ -13,9 +13,6 @@ const CryptoDetail = ({ navigation, route })  => {
     <View style={{flex:1,backgroundColor:'#999'}}>
       <Text>{route.params?.data.symbol}</Text>
       <Text>{route.params?.data.name }</Text>
-
-
-      {/* <Text onPress={backBotton(navigation,route)}>back</Text> */}
       <Button
           onPress={() => {backBotton(navigation,route)}}
           title="Back"

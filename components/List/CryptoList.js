@@ -12,11 +12,6 @@ export class CryptoList extends Component {
   }
   componentDidMount() {
     this.getData()
-    // axios.get('https://api.alternative.me/v2/ticker/?limit=20').then (response => {
-    //   let data = response.data.data;
-    //   let dataEl = listingDataOptimizer(data)
-    //   this.setState({cryptoList: dataEl})
-    // })
   }
   
   getData() {

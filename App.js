@@ -7,9 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
-
 const Tab = createBottomTabNavigator();
-// const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <View style={styles.container}>
@@ -25,8 +23,7 @@ export default function App() {
               )}} />
         </Tab.Navigator>
       </NavigationContainer>
-      {/* <CryptoList /> */}
-      </View>
+    </View>
     
   );
 }
@@ -35,8 +32,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width:'100%',
-    backgroundColor: '#999',
-
+    // backgroundColor: '#999',
   },
   textCenter: {
     color:'#555'
