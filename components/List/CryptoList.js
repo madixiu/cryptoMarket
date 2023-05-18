@@ -15,7 +15,7 @@ export class CryptoList extends Component {
   }
   
   getData() {
-    axios.get('https://api.alternative.me/v2/ticker/?limit=20').then (response => {
+    axios.get('https://api.alternative.me/v2/ticker/?limit=50').then (response => {
       let data = response.data.data;
       let dataEl = listingDataOptimizer(data)
       this.setState({cryptoList: dataEl})
@@ -53,7 +53,7 @@ export class CryptoList extends Component {
           <FlatList
             data={this.state.cryptoList}
             renderItem={({ item }) => {
-              return   <ListDetail navigation={this.props.navigation} name={item.name} symbol={item.symbol} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
+              return   <ListDetail navigation={this.props.navigation} name={item.name} symbol={item.symbol} rank={item.rank} price={item.price} change24h={item.percent_change_24h} change1h={item.percent_change_1h} change7d={item.percent_change_7d}/>
             }}
             refreshControl={
               <RefreshControl 

@@ -12,6 +12,7 @@ const textColor = (input) => {
 }
 const iconIDfinder = (symbol) => {
   let IDdata = jsonData
+  if(IDdata[symbol])
   return IDdata[symbol].id
 }
 const onItemClick = (data,navigation) => {
@@ -31,12 +32,20 @@ const ListDetail = (props) => {
       
       <View style={styles.container}>
         <View style={styles.IconViewStyle}>
-          <Image source={{ uri: 'https://s2.coinmarketcap.com/static/img/coins/64x64/'+iconIDfinder(props.symbol)+'.png', cache: 'force-cache'}} 
+          {/* <Image source={{ uri: 'https://s2.coinmarketcap.com/static/img/coins/64x64/'+iconIDfinder(props.symbol)+'.png', cache: 'force-cache'}} 
+            style={{ width: 32, height: 32,marginLeft: 10, }}
+          /> */}
+          <Image source={{ uri: 'https://lcw.nyc3.cdn.digitaloceanspaces.com/production/currencies/64/'+props.symbol.toLowerCase() +'.png', cache: 'force-cache'}} 
             style={{ width: 32, height: 32,marginLeft: 10, }}
           />
-          <View>
-            <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+          <View style={{paddingLeft:8}}>
             <Text style={styles.nameTextStyling}>{props.name}</Text>
+            <View style={{flexDirection:'row',alignItems:'center'}}>
+              <View style={styles.rankTextView}>
+                <Text style={styles.rankTextStyling}>{props.rank}</Text>
+              </View>
+              <Text style={styles.symbolTextStyling}>{props.symbol}</Text>
+            </View>
           </View>
         </View>
 
@@ -87,13 +96,26 @@ const styles = {
     // minHeight: 74
   },
   symbolTextStyling: {
-    fontSize: 15,
-    paddingLeft: 10,
+    fontSize: 12,
+    // paddingLeft: 10,
   },
   nameTextStyling: {
-    fontSize: 12,
-    paddingLeft: 10,
+    fontSize: 9,
+    // paddingLeft: 10,
     color: '#666'
+  },
+  rankTextStyling:{
+    fontSize:7,
+    color:'white'
+    
+  },
+  rankTextView:{
+    backgroundColor:'#999999',
+    borderRadius:2,
+    padding:2,
+    paddingHorizontal:5,
+    marginRight:2
+
   },
   priceTextStyling: {
     fontSize: 12,
